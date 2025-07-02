@@ -19,7 +19,7 @@ jobs:
     - name: Install dependencies
       run: |
         sudo apt-get update
-        sudo apt-get install -y curl zip unzip m4 genimage whois qemu-user-static
+        sudo apt-get install -y curl zip unzip m4 genimage whois qemu-user-static execstack
 
     - name: Create xbps directory
       run: mkdir -p $HOME/xbps
