@@ -21,6 +21,9 @@ jobs:
         sudo apt-get update
         sudo apt-get install -y curl zip unzip m4 genimage whois qemu-user-static
 
+    - name: Create xbps directory
+      run: mkdir -p $HOME/xbps
+
     - name: Install xbps
       run: |
         curl -LO https://repo-default.voidlinux.org/static/xbps-static-latest.x86_64-musl.tar.xz
