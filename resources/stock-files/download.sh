@@ -92,6 +92,6 @@ cp -a "$MNT_PATH"/usr/share/fonts/ttf-bitstream-vera "$OUTPUT_PATH"/usr/share/fo
 
 cp -a "$MNT_PATH"/etc/fonts "$OUTPUT_PATH"/etc/
 
-chown -R root:root "$OUTPUT_PATH"/*
+#chown -R root:root "$OUTPUT_PATH"/*
 
 echo "Done!"
