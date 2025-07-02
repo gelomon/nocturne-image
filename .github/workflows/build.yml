@@ -24,6 +24,9 @@ jobs:
     - name: Create xbps directory
       run: mkdir -p $HOME/xbps
 
+    - name: Run stock-files
+      run: cd resources/stock-files && ./download.sh
+
     - name: Install xbps
       run: |
         curl -LO https://repo-default.voidlinux.org/static/xbps-static-latest.x86_64-musl.tar.xz
