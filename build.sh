@@ -37,7 +37,7 @@ done
 
 SAVED_PWD="$(pwd)"
 
-WORK_PATH=$(mktemp -d)
+WORK_PATH=$HOME/tmp/image-build
 export ROOTFS_PATH="${WORK_PATH}/rootfs"
 IMAGE_PATH="${WORK_PATH}/img"
 export OUTPUT_PATH="${SAVED_PWD}/output"
