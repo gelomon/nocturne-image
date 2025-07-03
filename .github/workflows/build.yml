@@ -19,7 +19,7 @@ jobs:
     - name: Install dependencies
       run: |
         sudo apt-get update
-        sudo apt-get install -y curl zip unzip m4 genimage whois qemu-user-static execstack
+        sudo apt-get install -y curl zip unzip m4 genimage whois execstack
 
     - name: Create xbps and temp directory
       run: mkdir -p $HOME/xbps && mkdir -p $HOME/tmp
@@ -30,9 +30,8 @@ jobs:
     - name: Install xbps
       run: |
         curl -LO https://repo-default.voidlinux.org/static/xbps-static-latest.x86_64-musl.tar.xz
-        tar --no-overwrite-dir --no-same-owner --no-same-permissions -xvf xbps-static-latest.x86_64-musl.tar.xz -C $HOME/xbps
-        echo "$HOME/xbps/usr/bin" >> $GITHUB_PATH
-
+        tar --no-overwrite-dir --no-same-owner --no-same-permissions -xvf xbps-static-latest.x86_64-musl.tar.xz -C /
+        
     - name: Run build script
       run: |
         chmod +x build.sh
