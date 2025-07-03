@@ -30,7 +30,8 @@ jobs:
     - name: Install xbps
       run: |
         curl -LO https://repo-default.voidlinux.org/static/xbps-static-latest.x86_64-musl.tar.xz
-        tar --no-overwrite-dir --no-same-owner --no-same-permissions -xvf xbps-static-latest.x86_64-musl.tar.xz -C /
+        tar --no-overwrite-dir --no-same-owner --no-same-permissions -xvf xbps-static-latest.x86_64-musl.tar.xz -C $HOME/xbps
+        echo "$HOME/xbps/usr/bin" >> $GITHUB_PATH
         
     - name: Run build script
       run: |
