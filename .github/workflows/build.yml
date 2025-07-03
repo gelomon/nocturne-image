@@ -21,8 +21,8 @@ jobs:
         sudo apt-get update
         sudo apt-get install -y curl zip unzip m4 genimage whois qemu-user-static execstack
 
-    - name: Create xbps directory
-      run: mkdir -p $HOME/xbps
+    - name: Create xbps and temp directory
+      run: mkdir -p $HOME/xbps && mkdir -p $HOME/tmp
 
     - name: Run stock-files
       run: cd resources/stock-files && ./download.sh
