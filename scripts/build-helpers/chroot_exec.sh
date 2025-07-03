@@ -5,7 +5,7 @@
 if [ "$1" = "-c" ]; then
   shift
   install -t "$ROOTFS_PATH"/tmp "$1"
-  COMMAND=/tmp/$(basename "$1")
+  COMMAND=$HOME/tmp/image-build$(basename "$1")
   DEL="$ROOTFS_PATH$COMMAND"
 else
   COMMAND="$1"
