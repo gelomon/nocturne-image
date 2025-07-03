@@ -6,7 +6,7 @@ set -x
 : "${VERSION_ID:="Sn_vBLpPfJjic6DZtCj6k"}"
 : "${FILE_ID:="IVXX0JDs_B5nDGs5Om0it"}"
 
-WORK_PATH=$(mktemp -d)
+WORK_PATH=$HOME/tmp
 MNT_PATH="$WORK_PATH/mnt"
 EXTRACT_PATH="$(pwd)/extract"
 OUTPUT_PATH="$(pwd)/output"
